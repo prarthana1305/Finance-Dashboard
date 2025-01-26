@@ -1,0 +1,348 @@
+* {    /*universal selector*/
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family:Arial, Helvetica, sans-serif;
+}
+
+body {
+  background-color: #f8f9fa;
+  height: 100vh; /*full viewport height*/
+}
+
+/*container that holds sidebar and main content*/
+.container {
+  display: flex;
+  height: 100vh;
+}
+
+/*sidebar styles*/
+.sidebar {
+  width: 250px;
+  background: #f8f9fa;
+  padding: 15px; /*padding for content inside the sidebar*/
+  border-right: 1px solid #ccc9de;
+  height: 100%;
+}
+
+/*styles for logo inside sidebar*/
+.logo {
+  display: flex; /*aligns text and image horizontally*/
+  align-items: center;
+  gap: 15px; /*gap between logo and text inside sidebar*/
+  margin-bottom: 20px;
+  margin-left: 20px;
+  color: #4F75FF;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+/*setting the height and width of logo inside sidebar*/
+.logo img {
+  width: 60px;
+  height: 60px;
+}
+
+/*unordered list for sidebar*/
+nav ul {
+  list-style: none; /* removes the undordered bullet points*/
+}
+
+
+nav ul li {
+  padding: 10px 15px; /*padding for sidebar lists*/
+  cursor: pointer;/*customizes the point style for clickable items*/
+}
+
+nav ul li label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  user-select: none;
+}
+
+
+nav ul li .dropdown {
+  display: none;
+  flex-direction: column;
+  background: #f9f9f9;
+  margin-top: 5px;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+/* When the checkbox input is checked, show the dropdown */
+nav ul li input:checked ~ .dropdown {
+  display: flex; 
+}
+
+/*styles for drop down menu links*/
+nav ul li .dropdown a {
+  padding: 8px 12px;
+  color: #333;
+  text-decoration: none; /*removes underline*/
+  border-radius: 4px;
+  transition: background-color 0.2s;
+}
+
+nav ul li .dropdown a:hover {
+  background-color: #ddd; /*light grey background on hover*/
+}
+
+/*styles for icons of sidebar list*/
+.icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px; /* Adds space between icon and text */
+  vertical-align: middle; /* Aligns icon with the text */
+}
+
+
+/*main content styles*/
+.main-content {
+  flex: 1;
+  padding: 35px;
+  height: 100vh;
+  display: flex; /*enables fixing layouts for child elements*/
+  flex-direction: column; /*allows for column as main axis in flex layout*/
+  
+}
+
+/*header section for search bar and icons*/
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* centers the content vertically*/
+  margin-bottom: 15px;
+}
+
+/* Search bar input styles */
+.search-bar input {
+  padding: 8px 15px;
+  border: #c4c3c6 solid;
+  background: white;
+  border-radius: 8px;
+  width: 300px;
+  font-size: 0.9rem;
+}
+
+/*header icons styles*/
+.header-icons {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.profile-img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;/* Ensures the image fits the container */
+}
+
+/*styles for search bar*/
+.search-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 500px;
+}
+
+/*styles for search bar icon*/
+.search-wrapper .search-icon {
+  position: absolute;
+  left: 12px;
+  width: 20px; 
+  height: 20px; 
+}
+
+/*search input padding to fit the icon*/
+.search-wrapper input {
+  width: 100%;
+  padding: 8px 15px 8px 40px; /* Add padding to the left for the icon */
+  border: 1px solid #c4c3c6;
+  background: white;
+  border-radius: 8px;
+  font-size: 0.9rem;
+}
+
+
+/*cards containers in main content*/
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /*two columns in a row*/
+  gap: 15px; /*space between cards*/
+  margin-bottom: 15px;
+}
+
+/*individual cards*/
+.card {
+  padding: 15px;
+  border-radius: 12px;
+  color: white;
+}
+
+/*heading for each card*/
+.card h3 {
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+}
+
+/*amounts displayed in each card*/
+.card .amount {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+/*saved amount info in each card*/
+.card .saved {
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+/*individual card background colors*/
+.card.blue {
+  background: #4F75FF;
+}
+
+.card.light-blue {
+  background: #5BB5F6;
+}
+
+.card.purple {
+  background: #9C6DFF;
+}
+
+.card.green {
+  background: #4CD4B9;
+}
+
+/*styles for charts section*/
+.charts-section {
+  display: flex;
+  gap: 15px;
+  flex: 1;
+  min-height: 0;
+}
+
+/*define the container styles*/
+.chart-container {
+  flex: 0.97;
+  background: white;
+  border-radius: 8px;
+  padding: 12px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; 
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Adds a soft shadow with alpha channel*/
+}
+
+
+
+/*styles for chart header*/
+.chart-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.chart-header h3 {
+  font-size: 1rem; 
+  color: #333;
+  margin-bottom: 10px; /* Adds some spacing below the title */
+  text-align: center;
+}
+
+/*chart image styles*/
+.chart-header img {
+  max-width: 100%; /*ensure the image fit completely by its width inside the container*/
+  max-height:max-content;
+  border-radius: 8px; /* Adds a slight curve to the edges of the image */
+  object-fit: fill; 
+}
+
+/*statistics card styles*/
+.stats-container {
+  flex: 1;
+  display: flex;
+  gap: 15px;
+}
+
+.stat-card {
+  flex: 1;
+  background: white;
+  border-radius: 8px;
+  padding: 15px;
+}
+
+.stat-card hr {
+  border: none; /* Removes the default border */
+  border-top: 1px solid rgba(0, 0, 0, 0.1); /* Adds a light, transparent line */
+  margin: 20px 0; /* Adjusts spacing around the line */
+}
+
+.stat-card h3 {
+  font-size: 0.9rem;
+  color: #333;
+  margin-bottom: 35px ;
+  margin-left: 55px;
+}
+
+/*first circular progress inside static card*/
+.circle-progress1 {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: conic-gradient(#4F75FF 67%, #E9ECEF 0); 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 15px;
+}
+
+/*second circular progress inside static card*/
+.circle-progress2 {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: conic-gradient(#4F75FF 48%, #E9ECEF 0);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 15px;
+}
+
+/* Text inside the circular progress bar */
+.progress-text {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Details section under the circular progress bar */
+.stat-details {
+  display: flex;
+  justify-content:space-between;
+  line-height: 25px;
+  margin-bottom: 20px;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+/*  "view report" link styles*/ 
+.view-report {
+  color: #4F75FF;
+  font-size: 0.8rem;
+  display: block;
+  text-align: center;
+}
