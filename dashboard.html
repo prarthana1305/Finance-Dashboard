@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finance Dashboard</title>
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+
+<body>
+    <div class="container">
+        <aside class="sidebar"> <!--Sidebar Section-->
+            <div class="logo"> 
+                <img src="https://thumbs.dreamstime.com/z/take-look-creatively-crafted-icon-crowdfunding-325840159.jpg" alt="Finance Logo">
+                <span>Finance</span>
+            </div>
+            <nav> <!--Lists inside the sidebar-->
+                <ul>
+                    <li class="has-dropdown">
+                        <input type="checkbox" id="dashboard-toggle" hidden>
+                        <label for="dashboard-toggle" class="dropdown-label">
+                            <img src="https://cdn-icons-png.flaticon.com/512/6717/6717248.png" alt="Dashboard Icon" class="icon">Dashboard
+                        </label>
+                        <div class="dropdown">
+                            <a href="#" class="dropdown-item">Classic</a>
+                            <a href="#" class="dropdown-item">Minimal</a>
+                            <a href="#" class="dropdown-item">Modern</a>
+                        </div>
+                    </li>
+                    <li class="has-dropdown">
+                        <input type="checkbox" id="pages-toggle" hidden>
+                        <label for="pages-toggle">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHWLcAcgpU4lAFILnAzPFHjt2ANjUNZDf6vA&s" alt="Dashboard Icon" class="icon">Pages
+                        </label>
+                        <div class="dropdown">
+                            <a href="#">Profile</a>
+                            <a href="#">Settings</a>
+                            <a href="#">Login</a>
+                            <a href="#">Register</a>
+                        </div>
+                    </li>
+                    <li class="has-dropdown">
+                        <input type="checkbox" id="apps-toggle" hidden>
+                        <label for="apps-toggle">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBABedNYVBDcHV-ratG2LuM3mZ_VyJwyxkYg&s" alt="Dashboard Icon" class="icon">Applications
+                        </label>
+                        <div class="dropdown">
+                            <a href="#">Calendar</a>
+                            <a href="#">Messages</a>
+                            <a href="#">Tasks</a>
+                            <a href="#">Projects</a>
+                        </div>
+                    </li>
+                    <li class="has-dropdown">
+                        <input type="checkbox" id="UI-toggle" hidden>
+                        <label for="UI-toggle">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlWt2T0z_3gZ_R1F616cKzizmeX2GaaEFwqw&s" alt="Dashboard Icon" class="icon">UI Components
+                        </label>
+                        <div class="dropdown">
+                            <a href="#">Button</a>
+                            <a href="#">Navbar</a>
+                            <a href="#">Header</a>
+                        </div>
+                    </li>
+                    <li class="has-dropdown">
+                        <input type="checkbox" id="widgets-toggle" hidden>
+                        <label for="widgets-toggle">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPM6zs4imcm1LxFCH2LrPelTSjObCXCzZ6NA&s" alt="Dashboard Icon" class="icon">Widgets
+                        </label>
+                        <div class="dropdown">
+                            <a href="#">Weather</a>
+                            <a href="#">Clock</a>
+                           
+                        </div>
+                    </li>
+                    <li class="has-dropdown">
+                        <input type="checkbox" id="forms-toggle" hidden>
+                        <label for="forms-toggle">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDQT45jTbs06GmkStrGmnGTzN3G0vklIJWPw&s" alt="Dashboard Icon" class="icon">Forms
+                        </label>
+                        <div class="dropdown">
+                            <a href="#">Contact form</a>
+                            <a href="#">Message form</a>
+                            
+                        </div>
+                    </li>
+                    <li class="has-dropdown">
+                        <input type="checkbox" id="charts-toggle" hidden>
+                        <label for="charts-toggle">
+                            <img src="https://cdn-icons-png.flaticon.com/512/404/404621.png" alt="Dashboard Icon" class="icon">Charts
+                        </label>
+                        <div class="dropdown">
+                            <a href="#">Pie Charts</a>
+                            <a href="#">Bar graph</a>
+                            
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+
+            <header>
+                <div class="search-bar">
+                    <div class="search-wrapper">
+                        <img src="https://img.icons8.com/?size=512&id=12773&format=png" alt="Search Icon" class="search-icon">
+                        <input type="text" placeholder="Search here...">
+                    </div>
+                </div>
+                <div class="header-icons">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0rDt8m7NpDWDgYAoiQmIcoAb758O1VePJ_A&s" alt="Profile" class="profile-img">
+                    <img src="https://media.istockphoto.com/id/1259101233/vector/chat-text-icon.jpg?s=612x612&w=0&k=20&c=tN7hdduasXVF-IiLlylcBqY-4WCUoAexO3kkunbIajE=" alt="Profile" class="profile-img">
+                    <div class="profile">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSD3OmwXK7xXXVWJZiocRJOasPkHLK27kGGOQ&s" alt="Profile" class="profile-img">
+                    </div>
+                </div>
+            </header>
+
+            <!-- Dashboard Cards -->
+            <div class="cards-container">
+                <div class="card blue">
+                    <h3>Total Income</h3>
+                    <div class="amount">$ 579,000</div>
+                    <div class="saved">Saved 25%</div>
+                </div>
+                <div class="card light-blue">
+                    <h3>Total Expences</h3>
+                    <div class="amount">$ 79,000</div>
+                    <div class="saved">Saved 25%</div>
+                </div>
+                <div class="card purple">
+                    <h3>Cash on Hand</h3>
+                    <div class="amount">$ 92,000</div>
+                    <div class="saved">Saved 25%</div>
+                </div>
+                <div class="card green">
+                    <h3>Net Profit Margin</h3>
+                    <div class="amount">$ 179,000</div>
+                    <div class="saved">Saved 65%</div>
+                </div>
+            </div>
+
+            <!-- Dashboard Charts Section -->
+            <div class="charts-section">
+                <div class="chart-container">
+                    <div class="chart-header">
+                        <div>
+                            <h3>AP and AR Balance</h3>
+                            <img src="https://premium.capitalmind.in/wp-content/uploads/2024/05/APAR-Industries_EBITDA-Growth-scaled.jpg" alt="AP AR graph">
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="stats-container">
+                    <div class="stat-card">
+                        <h3>% of Income Budget</h3>
+                        <div class="circle-progress1">
+                            <div class="progress-text">67%</div>
+                            <span>Budget</span>
+                        </div>
+                        <div class="stat-details">
+                            <div>Balance <span>$13,570</span></div>
+                            <div>Balance <span>$31,430</span></div>
+                        </div>
+                        <hr>
+                        <a href="#" class="view-report">View Full Report</a>
+                    </div>
+                    <div class="stat-card">
+                        <h3>% of Expenses Budget</h3>
+                        <div class="circle-progress2">
+                            <div class="progress-text">48%</div>
+                            <span>Profit</span>
+                        </div>
+                        <div class="stat-details">
+                            <div>Balance <span>$18,576</span></div>
+                            <div>Balance <span>$28,530</span></div>
+                        </div>
+                        <hr>
+                        <a href="#" class="view-report">View Full Report</a>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
